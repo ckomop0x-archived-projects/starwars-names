@@ -1,7 +1,7 @@
 {
   "name": "starwars-names-ckomop0x",
-  "version": "1.1.0",
-  "description": "Get random starwars names",
+  "version": "1.2.0",
+  "description": "Get random starwars names with surprises",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
