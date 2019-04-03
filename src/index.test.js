@@ -21,9 +21,18 @@ describe('Star Wars Names', function() {
 
   describe('random', function() {
     it('should return a random item from the starWars.all', function() {
-        var randomItem = starWars.random();
+      var randomItem = starWars.random();
 
       expect(starWars.all).to.include(randomItem);
+    });
+
+    it('should return array of random items if passed a number', function() {
+      var randomItems = starWars.random(3);
+
+      expect(randomItems).to.have.length(3);
+      randomItems.forEach(function(randomItem) {
+        expect(starWars.all).to.include(randomItem);
+      })
     });
   });
 });
