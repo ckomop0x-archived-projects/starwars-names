@@ -1,23 +1,43 @@
+#language: node_js
+#
+#node_js:
+#  - 8
+#  - 6
+#
+#jobs:
+#  include:
+#    # Define the release stage that runs semantic-release
+#    - stage: release
+#      node_js: lts/*
+#      # Advanced: optionally overwrite your default `script` step to skip the tests
+#      # script: skip
+#      deploy:
+#        provider: script
+#        skip_cleanup: true
+#        before_script:
+#          - npm run test
+#          - npm run check-coverage
+#          - npm run report-coverage
+#        script:
+#          - npx semantic-release
+
+
 language: node_js
 
+sudo: false
+
 node_js:
-  - 8
-  - 6
+  - "10"
+  - "9"
+  - "8"
+  - "7"
+  - "6"
+  - "5"
+  - "4"
+script:
+  - npm run test
+  - npm run check-coverage
 
-jobs:
-  include:
-    # Define the release stage that runs semantic-release
-    - stage: release
-      node_js: lts/*
-      # Advanced: optionally overwrite your default `script` step to skip the tests
-      # script: skip
-      deploy:
-        provider: script
-        skip_cleanup: true
-        before_script:
-          - npm run test
-          - npm run check-coverage
-          - npm run report-coverage
-        script:
-          - npx semantic-release
-
+after_success:
+  - npx semantic-release
+  - npm run report-coverag
