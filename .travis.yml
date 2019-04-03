@@ -1,8 +1,8 @@
 language: node_js
 
-node_js:
-  - 8
-  - 6
+#node_js:
+#  - 8
+#  - 6
 
 jobs:
   include:
@@ -12,11 +12,18 @@ jobs:
       # Advanced: optionally overwrite your default `script` step to skip the tests
       # script: skip
       deploy:
-        provider: script
-        skip_cleanup: true
-        before_script:
-          - npm run test
-          - npm run check-coverage
+#        provider: script
+#        skip_cleanup: true
         script:
+          - npm run test:single
+          - npm run check-coverage
+        after_success:
           - npm run report-coverage
-          - npx semantic-release
+          - npm run semantic-release
+
+#        before_script:
+#          - npm run test
+#          - npm run check-coverage
+#        script:
+#          - npm run report-coverage
+#          - npx semantic-release
