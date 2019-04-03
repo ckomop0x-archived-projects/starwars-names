@@ -17,7 +17,7 @@ jobs:
         before_script:
           - npm run test
           - npm run check-coverage
+          - npm run report-coverage
         script:
           - npx semantic-release
-        after_success:
-          - npm run report-coverage
+
