@@ -1,7 +1,7 @@
 {
   "name": "starwars-names-ckomop0x",
   "version": "0.0.0-development",
-  "description": "Get random starwars names with surprises",
+  "description": "Get random starwars names with surprises, well tested and semtically released",
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
