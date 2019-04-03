@@ -15,4 +15,8 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
+          - npm run test
+          - npm run check-coverage
+        after_success:
+          - npm run report-coverage
           - npx semantic-release
