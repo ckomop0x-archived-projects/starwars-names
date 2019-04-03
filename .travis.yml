@@ -18,5 +18,6 @@ jobs:
           - npm run test
           - npm run check-coverage
         script:
-          - npm run report-coverage
           - npx semantic-release
+        after_success:
+          - npm run report-coverage
