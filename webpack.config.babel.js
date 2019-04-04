@@ -1,20 +1,14 @@
-import {join} from 'path'
-
-const include = join(__dirname, 'src')
-const isProd = process.argv.indexOf('-p') !== -1;
+import { join } from "path";
 
 export default {
-  mode: isProd ? 'production' : 'development',
-  entry: './src/index',
+  entry: "./src/index.js",
   output: {
-    path: join(__dirname, 'dist'),
-    libraryTarget: 'umd',
-    library: 'starWarsNames',
+    path: join(__dirname, "dist"),
+    libraryTarget: "umd",
+    library: "starWarsNames"
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
-    rules: [
-      {test: /\.js$/, loader: 'babel-loader', include},
-    ]
+    rules: [{ test: /\.js$/, use: "babel-loader" }]
   }
-}
+};
