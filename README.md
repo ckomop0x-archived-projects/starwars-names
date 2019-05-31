@@ -5,3 +5,6 @@
 [![version](https://img.shields.io/npm/v/starwars-names-ckomop0x.svg?style=flat-square)](http://npm.im/starwars-names-ckomop0x)
 [![downloads](https://img.shields.io/npm/dm/starwars-names-ckomop0x.svg?style=flat-square)](http://npm-stat.com/charts.html?package=starwars-names-ckomop0x&from=2015-08-01)
 [![MIT License](https://img.shields.io/npm/l/starwars-names-ckomop0x.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
+Project code coverage.  
+https://codecov.io/gh/ckomop0x/starwars-names
